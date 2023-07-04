@@ -1,0 +1,23 @@
+﻿@using FirstApp.Models
+@{
+    //List<Student> students = (List<Student>)ViewData["Students"];
+    List<Student> students = ViewBag.Students;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h2>Students count: @students.Count</h2>
+
+    <ul>
+        @foreach (var std in students)
+        {
+            <li>@std.FullName - @std.Age</li>
+        }
+    </ul>
+</body>
+</html>

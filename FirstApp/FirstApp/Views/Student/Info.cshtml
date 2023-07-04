@@ -1,0 +1,27 @@
+﻿@using FirstApp.Models
+@{
+    Student std = ViewBag.Student;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Info</title>
+</head>
+<body>
+    <h2>FullName: @std.FullName</h2>
+    <h2>Age: @std.Age</h2>
+    <h2>Stauts: @*<span style="color:@(std.Point>65?"green":"red")" >@(std.Point>65?"Kecdiniz":"Kesildiniz")</span>*@
+        @if (std.Point > 65)
+        {
+            <span style="color:green">Kecdiniz</span>
+        }
+        else
+        {
+            <span style="color:red">Kesildiniz</span>
+        }
+    </h2>
+</body>
+</html>
